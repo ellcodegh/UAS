@@ -1,14 +1,14 @@
 <?php
 include "koneksi.php";
 
-$nama   = $_POST['nama'];
-$email  = $_POST['email'];
-$pesan  = $_POST['pesan'];
-$tgl    = date("Y-m-d H:i:s");
+$nama  = bersihkan($_POST['nama']);
+$email = bersihkan($_POST['email']);
+$pesan = bersihkan($_POST['pesan']);
 
-mysqli_query($koneksi, "INSERT INTO buku_tamu VALUES (
-    NULL, '$nama', '$email', '$pesan', '$tgl'
-)");
+mysqli_query($koneksi, "
+    INSERT INTO buku_tamu (nama, email, pesan, tanggal)
+    VALUES ('$nama', '$email', '$pesan', NOW())
+");
 
 header("location:trims.php");
 ?>
