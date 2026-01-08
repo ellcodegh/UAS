@@ -22,7 +22,7 @@ $no = 1;
         </div>
         <div class="card-body">
 
-            <a href="tambah.php" class="btn btn-success mb-3">Tambah Data</a>
+            <a href="tambah.php" target="_blank" class="btn btn-success mb-3">Tambah Data</a>
             <a href="cetak_pdf.php" target="_blank" class="btn btn-danger mb-3">Cetak PDF</a>
             <a href="logout.php" class="btn btn-danger mb-3 float-end">Logout</a>
 
